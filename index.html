@@ -23,7 +23,6 @@
 
 .container input {
     width: 80vw;
-    height: 60px;
     border-radius: 30px;
     padding: 10px;
     color: #000;
@@ -58,7 +57,7 @@
 <script>
 function handleClick() {
     const inputValue = document.getElementById('myInput').value;
-    href="inputValue"
+    window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(inputValue);
 }
 </script>
 </body>
