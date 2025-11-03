@@ -20,14 +20,46 @@
     margin: 20px 0;
     text-decoration: none;
 }
+
+.container input {
+    width: 80vw;
+    height: 60px;
+    border-radius: 30px;
+    padding: 10px;
+    color: #000;
+    border: 2px solid #000;
+    font-size: 20px;
+    text-align: center;
+}
+
+.container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
 </style>
 </head>
 <body>
 <div class="container">
+    <input id="myInput" placeholder="search" />
+    <button onclick="handleClick()">Search</button>
+    
     <a href="https://www.youtube.com">Youtube</a>
     <a href="https://github.com">Github</a>
     <a href="https://leonhr03.github.io/ideaPlan/">ideaPlan</a>
     <a href="https://leonhr03.github.io/InSearchNext/">InSearchNext</a>
 </div>
+
+<script>
+function handleClick() {
+    const inputValue = document.getElementById('myInput').value;
+    href="inputValue"
+}
+</script>
 </body>
 </html>
