@@ -45,8 +45,8 @@
 </head>
 <body>
 <div class="container">
-    <input id="myInput" placeholder="search" />
-    <button onclick="handleClick()">Search</button>
+    <input id="input" placeholder="search" />
+    <button id="button">Search</button>
 
     <a href="https://leonhuber.github.io/LeonHuber/">Leon Huber</a>
     <a href="https://www.youtube.com">Youtube</a>
@@ -56,10 +56,23 @@
 </div>
 
 <script>
-function handleClick() {
-    const inputValue = document.getElementById('myInput').value;
-    window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(inputValue);
-}
+
+    const input = document.getElementById("input")
+    const button = document.getElementById("button")
+
+    input.addEventListener("keydown", function(event) {
+        if(event.key === "Enter"){
+            event.preventDefault();
+            button.click()
+        }
+    });
+    
+    button.addEventListener("click", function() {
+        const inputValue = document.getElementById('input').value;
+        window.location.href = encodeURIComponent(inputValue);
+    });
+
+
 </script>
 </body>
 </html>
